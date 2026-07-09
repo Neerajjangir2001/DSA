@@ -27,7 +27,6 @@ public class MoveZeroes {
         while ( right < nums.length ){
 
             if (nums[left] ==0  && nums[right] ==0 ){
-                // swap
 
                 right++;
             } else if (  nums[right] != 0){
@@ -37,10 +36,7 @@ public class MoveZeroes {
                 left++;
                 right++;
             }
-
-
-
-           }
+        }
 
 
 

@@ -16,8 +16,6 @@ public class RemoveDuplicates {
                 nums[left] = nums[right];
 
             }
-
-
         }
         return left + 1;
     }
