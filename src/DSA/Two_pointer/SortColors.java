@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 
-import static java.util.Collections.swap;
+// problem : 75. Sort Colors
 
 public class SortColors {
     public void sortColors(int[] nums) {
