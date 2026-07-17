@@ -6,6 +6,36 @@ public class LengthOfLongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
 
+//        int low = 0, high = 0;
+//        int ans = Integer.MIN_VALUE;
+//
+//        HashMap<Character, Integer> map = new HashMap<>();
+//        for ( high = 0; high < s.length(); high++) {
+//
+//            char ch= s.charAt(high);
+//          map.put(ch, map.getOrDefault(ch, 0) + 1);
+//
+//          int k = high - low + 1;
+//          while (map.size() < k) {
+//            char ch1 = s.charAt(low);
+//            map.put(ch1, map.get(ch1) - 1);
+//            if (map.get(ch1) == 0) {
+//              map.remove(ch1);
+//            }
+//            low++;
+//               k = high - low + 1;
+//          }
+//
+//          ans = Math.max(ans, high - low + 1);
+//
+//        }
+//
+//
+//        return ans;
+
+
+
+
         int low = 0, high = 0;
         int ans = 0;
 
@@ -13,14 +43,14 @@ public class LengthOfLongestSubstring {
         for ( high = 0; high < s.length(); high++) {
 
             char ch= s.charAt(high);
-          map.put(ch, map.getOrDefault(s.charAt(high), 0) + 1);
+            map.put(ch, map.getOrDefault(s.charAt(high), 0) + 1);
 
-          while (map.get(ch) > 1) {
-              char c = s.charAt(low);
-              map.put(c, map.get(c) - 1);
-              low++;
-          }
-          ans = Math.max(ans, high - low + 1);
+            while (map.get(ch) > 1) {
+                char c = s.charAt(low);
+                map.put(c, map.get(c) - 1);
+                low++;
+            }
+            ans = Math.max(ans, high - low + 1);
 
         }
 
