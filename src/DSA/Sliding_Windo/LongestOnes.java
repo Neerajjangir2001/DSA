@@ -18,7 +18,6 @@ public class LongestOnes {
               low++;
           }
             ans = Math.max(ans, high - low + 1);
-
         }
 
         return ans;
