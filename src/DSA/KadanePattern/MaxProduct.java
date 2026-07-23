@@ -9,8 +9,8 @@ public class MaxProduct {
 
         for (i =1; i< nums.length;i++){
             int v1 = nums[i];
-            int v2 = minEnding * nums[i];
-            int v3 = maxEnding * nums[i];
+            int v2 = maxEnding * nums[i];
+            int v3 = minEnding * nums[i];
 
             maxEnding = Math.max(v1, Math.max(v2, v3));
             minEnding = Math.min(v1, Math.min(v2, v3));
