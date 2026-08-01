@@ -11,7 +11,6 @@ public class MaxSubArray {
         for ( i = 1; i< nums.length; i++){
             int v1 = bestEnding + nums[i];
             int v2 = nums[i];
-
             bestEnding = Math.max(v1, v2);
             ans = Math.max(ans, bestEnding);
 
